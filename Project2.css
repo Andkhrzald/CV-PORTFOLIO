@@ -11,20 +11,25 @@
 
 :root {
     --bg-color: #000000;
-    --second-bg-color: #161616;
-    --text-color: #fff;
-    --main-color: #f57e00;
+    --second-bg-color: #525B44;
+    --text-color: #ffffff;
+    --main-color: #85A98F;
 }
+
+/* root untuk menentukan warna project jadi bisa langsung var()*/
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
+
 body {
     background: var(--bg-color);
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 html::-webkit-scrollbar {
@@ -344,10 +349,19 @@ span {
 
 /* services section*/
 
-.service {
-    background: var(--second-bg-color);
+.services {
+    background: var(--bg-color);
 }
 
+.services h2 {
+    text-align: center;
+    /* Meratakan teks di dalam elemen */
+    font-size: 10rem;
+    /*Ukuran font skills*/
+    font-weight: 500;
+    margin-bottom: 1rem;
+    /*jarak anatara box container di bawah*/
+}
 
 .service-container {
     display: grid;
@@ -361,7 +375,7 @@ span {
 }
 
 .service-box {
-    background-color: #e1352c48;
+    background-color: var(--second-bg-color);
     display: grid;
     height: 300px;
     border-radius: 3rem;
@@ -371,9 +385,13 @@ span {
 
 .service-box:hover {
     background: transparent;
+    /*transparantkan box */
     color: var(--main-color);
+    /*merubah color ketika trasnparnt*/
     transform: scale(1.03);
+    /*kecepatan timpul transparnt*/
     border: 1px solid var(--main-color);
+    /*membuat garis solid & mewarnai garis pinggir box */
 }
 
 .service-box .service-info {
@@ -437,7 +455,7 @@ span {
 
 
 .skills .container {
-    background: #e1352c48;
+    background: var(--second-bg-color);
     color: var(--text-color);
     border-radius: 1rem;
     padding: 2rem;
@@ -449,6 +467,7 @@ span {
 .skills .container .row {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    /*membuat 5 wrap/grid dengan 1fr */
     flex-wrap: wrap;
     gap: 1.8rem;
 }
@@ -464,9 +483,10 @@ span {
 }
 
 .skills .container .bar:hover {
-    box-shadow: 0 4px 10px var(--main-color);
+    box-shadow: 0 4px 10px var(--text-color);
     transform: scale(1.03);
     /* container timbul */
+
 }
 
 .skills .container .bar .info {
@@ -537,11 +557,11 @@ span {
     content: '';
     position: absolute;
     width: 6px;
-    background: rgb(222, 0, 0);
+    background: #525B44;
     top: 0;
     bottom: 0;
     left: 600px;
-    /*menyesuaikan garis merah diposisi yg diingginkan*/
+    /*menyesuaikan garis hijau diposisi yg diingginkan*/
     margin-left: -3px;
     z-index: -2px;
 }
@@ -572,7 +592,7 @@ span {
     text-align: center;
     font-weight: 600;
     font-family: "font Awesome\ 5 Free";
-    color: rgb(90, 64, 64);
+    color: var(--bg-color);
     /*untuk mewarnai gambar didalam lingkaran*/
 }
 
@@ -606,7 +626,7 @@ span {
     border-width: 10px 0 10px 10px;
     /** Mengatur ketebalan border pada sisi atas, kanan, bawah, dan kiri (hanya kiri yang terlihat) **/
     border-color: transparent transparent transparent var(--main-color);
-    /** Mengatur warna border: hanya sisi kiri yang memiliki warna (warna utama) **/
+    /** Mengatur sisi segitiga dengan rapi**/
 }
 
 .education .right::before {
@@ -638,8 +658,8 @@ span {
 }
 
 .education .content {
-    background: var(--main-color);
-    /*menyesuaikan warna box kuning*/
+    background: var(--second-bg-color);
+    /*menyesuaikan warna box dari second-bg-color :root*/
     position: relative;
     border-radius: 6px;
 }
@@ -649,4 +669,193 @@ span {
     /*jarak tag */
     padding-top: 1.5rem;
     padding-left: 1.5rem;
+}
+
+.education .content .decs {
+    margin-left: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.education .content .tag h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.education .content .decs p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+@media screen and (max-width:600px) {
+    .education .timeline {
+        margin-top: 2rem;
+    }
+
+    .education .timeline::after {
+        left: 31px;
+    }
+
+    .education .container {
+        width: 100%;
+        padding-left: 8rem;
+        padding-right: 2rem;
+    }
+
+    .education .container::after {
+        font-size: 2.2rem;
+    }
+
+    .education .container::before {
+        left: 61px;
+        border: medium solid var(--main-color);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--main-color) transparent transparent;
+    }
+
+    .education .left::after {
+        left: 15px;
+    }
+
+    .education .right::after {
+        left: 15px;
+    }
+
+    .education .right {
+        left: 0%;
+    }
+}
+
+/*Contact Section*/
+
+.contact h2 {
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--second-bg-color);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+}
+
+/*footer section */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--main-color);
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: black;
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: var(--bg-color);
+    border: 2px solid black;
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2)translateY(-5px);
+    background: var(--bg-color);
+    color: var(--main-color);
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: black;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid black;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+@media(max-width:1285px) {
+    html {
+        font-size: 55px;
+    }
+
+    .service-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
+    }
+}
+
+@media(max-width:991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    .section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .footer {
+        padding: 2rem 3;
+    }
 }
