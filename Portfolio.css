@@ -26,7 +26,7 @@ html {
 
 
 body {
-    background: url(foto/Background\ Portfolio.jpg) no-repeat center center fixed;
+    background: url(./foto/background.jpg) no-repeat center center fixed;
     background-size: cover; /* Agar gambar memenuhi layar */
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
@@ -257,7 +257,7 @@ span {
 
 .typing-text span::after {
     content: '';
-    background: url(/Portfolio_Learning/foto/Background\ Portfolio.jpg)no-repeat center center fixed ;
+    background: url(./foto/background.jpg)no-repeat center center fixed ;
     background-size: cover;
     position: absolute;
     width: calc(100% + 8px);
@@ -395,7 +395,7 @@ span {
 }
 
 .service-box {
-    background: url(foto/animasi\ 1.jpg) no-repeat center center fixed;
+    background: url() no-repeat center center fixed; /*bisa pakai bisa ga*/
     background-size: cover; /* Agar gambar memenuhi layar */
     display: grid;
     height: 300px;
@@ -495,7 +495,7 @@ span {
     margin-bottom: 15px;
     padding: 25px;
     border-radius: 1rem;
-    background: url(foto/animasi\ 1.jpg) no-repeat center center fixed;
+    background: url() no-repeat center center fixed;
     background-size: cover; /* Agar gambar memenuhi layar */
     transition: 0.3s ease;
     cursor: pointer;
