@@ -280,12 +280,12 @@ span {
     /* Fixed the name from `word` to `words` */
     0%,
     20% {
-        content: 'Web Developer';
+        content: 'Mahasiswa';
     }
 
     21%,
     40% {
-        content: 'Software Developer';
+        content: 'Frontend Developer';
         /* Fixed spelling */
     }
 
@@ -297,7 +297,7 @@ span {
 
     61%,
     80% {
-        content: 'Photographer';
+        content: 'Staff Admin';
         /* Fixed spelling */
     }
 
@@ -395,7 +395,7 @@ span {
 }
 
 .service-box {
-    background: url() no-repeat center center fixed; /*bisa pakai bisa ga*/
+    background-color:var(--primary);
     background-size: cover; /* Agar gambar memenuhi layar */
     display: grid;
     height: 300px;
